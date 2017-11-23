@@ -1,0 +1,36 @@
+/*头部样式*/
+header {
+	width: 100%;
+	height: 30px;
+	background-color: #6BC30D;
+}
+
+/*导航样式*/
+nav {
+	height: 102px;
+	background: red;
+}
+
+/*横幅样式*/
+section {
+	height: 381px;
+	background: blue;
+}
+
+/*主题样式*/
+main {
+	height: 266px;
+	background-color: skyblue;
+}
+
+/*主要内容样式*/
+article {
+	height: 461px;
+	background-color: pink;
+}
+
+/*页脚样式*/
+footer {
+	height: 238px;
+	background: green;
+}

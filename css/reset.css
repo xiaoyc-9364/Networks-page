@@ -13,11 +13,20 @@ sub{vertical-align:text-bottom}
 input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;*font-size:100%}
 legend{color:#000}
 a{text-decoration: none;}
-/*
+
 body{
 	font-family: "微软雅黑";
-	font-style: 12px;
-	color: #999;
-	background-color: #f5f5f5;
+	/*font-style: 12px;*/
+	/*color: #999;*/
+	/*background-color: #f5f5f5;*/
 }
-*/
+.clearfix::after {
+	content:'';
+	height: 0;	
+	display: block;	
+	visibility: hidden;	
+	clear: both;	 
+}
+.clearfix {
+	*zoom: 1;
+}

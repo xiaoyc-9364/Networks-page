@@ -4,13 +4,95 @@ header {
 	height: 30px;
 	background-color: #6BC30D;
 }
+.header_main {
+	width: 980px;
+	margin: 0 auto;
+}
+.header_main p {
+	font-size: 12px;
+	line-height: 30px;
+	color: #fff;
+}
+.header_main p:first-child {
+	float: left;
+}
+.header_main p:last-child {
+	float: right;
+	padding-left: 27px;
+	background: url(../image/phone_icons.png) left center no-repeat;
 
+}
 /*导航样式*/
 nav {
+	width: 980px;
 	height: 102px;
-	background: red;
+	margin: 0 auto;
+	/*background: red;*/
 }
-
+.navgation {
+	float: right;
+}
+.navgation li {
+	float: left;
+}
+.navgation li a {
+	display: block;
+	height: 102px;
+	width: 97px;
+	padding-top: 58px;
+	text-align: center;
+	font-size: 15px;
+	color: #3a3a3a;
+	background-color: #fff;
+	position: relative;
+	border-left: 1px solid #e5e5e5;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.navgation li a:hover,
+.navgation li a:focus {
+	height: 103px;
+	transform: translateY(-1px);
+}
+.navgation li:first-child a{
+	background-color: #6BC30D;
+	color: #fff;
+}
+.navgation li:last-child a{
+	border-right: 1px solid #e5e5e5;
+	/*background-color: #6BC30D;*/
+}
+.navgation li a b {
+	display: block;
+	width: 29px;
+	height: 28px;
+	position: absolute;
+	left: 35px;
+	top: 27px;
+	background: url(../image/nav_icons.png) no-repeat;
+}
+.navgation li:nth-child(1) a b {
+	background-position: 0 0;
+}
+.navgation li:nth-child(2) a b {
+	background-position: 0 -28px;
+}
+.navgation li:nth-child(3) a b {
+	background-position: 0 -56px;
+}
+.navgation li:nth-child(4) a b {
+	background-position: 0 -84px;
+}
+.navgation li:nth-child(5) a b {
+	background-position: 0 -112px;
+}
+.navgation li:nth-child(6) a b {
+	background-position: 0 -140px;
+}
+.navgation li:nth-child(7) a b {
+	background-position: 0 -168px;
+}
 /*横幅样式*/
 section {
 	height: 381px;

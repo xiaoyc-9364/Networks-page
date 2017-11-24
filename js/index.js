@@ -17,10 +17,9 @@
 	MYAPP.oPrev.addEventListener('click', function() {
 		MYAPP.slider2.go(-1);
 	}, false);
-	MYAPP.oPrev.addEventListener('click', function() {
+	MYAPP.oNext.addEventListener('click', function() {
 		MYAPP.slider2.go(1);
 	}, false);
-	console.log(MYAPP.oPrev);
 
 
 

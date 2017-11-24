@@ -1,5 +1,3 @@
-window.onload = function(){
-
 
 	var MYAPP = {};
 
@@ -12,16 +10,21 @@ window.onload = function(){
 		],
 		timeout: 3000,
 	}
-	var	oBanner = document.getElementById('banner');
-	var a;
-	// MYAPP.slider = new Slide('.banner', MYAPP.json);
-	// console.log(MYAPP.slider.width);
-	document.onresize = function () {
-
-		MYAPP.slider.width = oBanner.offsetWidth;
+	MYAPP.slider1 = new Slide('.banner', MYAPP.json);
+	MYAPP.slider2 = new Slide('.small_slide', MYAPP.json);
+	MYAPP.banner = document.getElementById('banner')
+	window.onresize = function() {
+		MYAPP.slider1.width = MYAPP.banner.style.width;
 	}
-
-}
+	MYAPP.oPrev = document.getElementById('prev');
+	MYAPP.oNext = document.getElementById('next');
+	MYAPP.oPrev.addEventListener('click', function() {
+		MYAPP.slider2.go(-1);
+	}, false);
+	MYAPP.oPrev.addEventListener('click', function() {
+		MYAPP.slider2.go(1);
+	}, false);
+	console.log(MYAPP.oPrev);
 
 
 

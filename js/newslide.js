@@ -23,6 +23,7 @@ Slide.prototype.createNode = function () {		//创建轮播器的内容
 	var thisImgData = this.options.imgData;
 	var imgDataLen = thisImgData.length;	//图片个数
 	this.width = this.wrap.clientWidth;		//获取目标元素的宽度
+	this.height = this.wrap.clientHeight;
 	this.oImgUl = document.createElement('ul');	//创建包裹图片的ul
 	this.dotUl = document.createElement('ul');	//创建选项卡ul
 	var dotStr = '';
@@ -53,6 +54,7 @@ Slide.prototype.createNode = function () {		//创建轮播器的内容
 	this.len = this.oImgUl.children.length;
 	for (var j = 0; j < this.len; j++) {
 		aImg[j].style.width = this.width + 'px';		//设置图片的宽度和包裹元素一致
+		aImg[j].style.height = this.height + 'px';
 	}
 
 	this.wrap.appendChild(this.oImgUl);		//将图片和选项卡的ul添加到包裹元素中

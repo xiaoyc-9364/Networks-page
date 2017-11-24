@@ -30,6 +30,7 @@ nav {
 }
 .navgation {
 	float: right;
+	height: 102px;
 }
 .navgation li {
 	float: left;
@@ -51,7 +52,8 @@ nav {
 }
 .navgation li a:hover,
 .navgation li a:focus {
-	height: 103px;
+	height: 104px;
+	top: -1px;
 	transform: translateY(-1px);
 }
 .navgation li:first-child a{
@@ -105,7 +107,6 @@ nav h1 a{
 section {
 	width: 100%;
 	height: 381px;
-	background: blue;
 	overflow: hidden;
 }
 
@@ -177,10 +178,6 @@ article {
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;`
 }
-.article_main {
-	/*height: 68px;*/
-	/*padding-top: 33px;*/
-}
 .network {
 	float: left;
 	width: 538px;
@@ -200,7 +197,6 @@ article {
 	box-sizing: border-box;
 }
 .network .caption, .display_case .caption{
-	/*display: inline-block;*/
 	width: 237px;
 	height: 36px;
 	line-height: 36px;
@@ -225,13 +221,13 @@ article {
 	background: url(../image/article_icons.png) 0 0 no-repeat;
 }
 .network .caption::after{
-	
+	background-position: 0 0;
 }
 .display_case .caption::after{
 	background-position: -18px 0;
 }
 .Ilink .caption::after{
-	bottom: 12px;
+	bottom: 3px;
 	background-position: -35px 0;
 }
 .caption b { 
@@ -242,11 +238,11 @@ article {
 	color: #bebebe;
 }
 .caption_more {
-	/*float: right;*/
 	color: #cecece;
 	position: absolute;
 	right: 0;
 	bottom: 0;
+	z-index: 10;
 	font-size: 14px;
 	line-height: 32px;
 	margin-right: 13px;
@@ -254,6 +250,43 @@ article {
 .article_content {
 	position: relative;
 	height: 203px;
+}
+.network .article_content span {
+	display: block;
+	position: absolute;
+	background: blue url(../image/article_img.png) no-repeat;
+}
+.network .article_content span:nth-child(1) {
+	width: 81px;
+	height: 54px;
+	left: 9px;
+	top: 47px;
+	border-radius: 4px 4px 0 0;
+	background-position: -8px -31px;
+}
+.network .article_content span:nth-child(2) {
+	width: 123px;
+	height: 80px;
+	left: 91px;
+	top: 21px;
+	border-radius: 4px 4px 8px 0;
+	background-position: -90px -5px;
+}
+.network .article_content span:nth-child(3) {
+	width: 89px;
+	height: 58px;
+	left: 1px;
+	top: 102px;
+	border-radius: 4px 0 6px 6px;
+	background-position: 0 -86px;
+}
+.network .article_content span:nth-child(4) {
+	width: 83px;
+	height: 54px;
+	left: 91px;
+	top: 102px;
+	border-radius: 0 0 6px 6px;
+	background-position: -90px -86px;
 }
 .article_content p {
 	width: 288px;
@@ -311,10 +344,13 @@ button.next{
 	position: absolute;
 	left: 50%;
 	top: 0;
+	z-index: 1;
 	transform: translate(-50%, 0);
 }
 .Ilink .caption {
-	height: 42px;
+	/*height: 42px;*/
+	position: relative;
+	z-index: 10;
 	line-height: 42px;
 	color: #6bc30d;
 	font-size: 18px; 
@@ -373,6 +409,8 @@ footer a {
 	width: 980px;
 	margin: 0 auto;
 	position: relative;
+	z-index: 10;
+
 }
 .outlist>li {
 	float: left;

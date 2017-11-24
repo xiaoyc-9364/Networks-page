@@ -1,14 +1,4 @@
 @charset: 'utf-8';
-.clearfix:after{
-	content: '.';
-	display: block;
-	visibility: hidden;
-	height: 0;
-	clear: both;
-}
-.clearfix{
-	*zoom: 1;
-}
 .slide_wrap{
 	overflow: hidden;
 	position: relative;

@@ -24,6 +24,11 @@ Slide.prototype.createNode = function () {		//创建轮播器的内容
 	var imgDataLen = thisImgData.length;	//图片个数
 	this.width = this.wrap.clientWidth;		//获取目标元素的宽度
 	this.height = this.wrap.clientHeight;
+	var _this = this;
+	window.onresize=function() {
+		_this.width = _this.wrap.clientWidth;
+		console.log(_this.width );
+	}
 	this.oImgUl = document.createElement('ul');	//创建包裹图片的ul
 	this.dotUl = document.createElement('ul');	//创建选项卡ul
 	var dotStr = '';

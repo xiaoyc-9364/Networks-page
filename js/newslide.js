@@ -29,7 +29,7 @@ Slide.prototype.createNode = function () {		//创建轮播器的内容
 	var oLi, oLink, oImg;
 
 	this.wrap.className += ' slide_wrap';	//设置包裹元素的css
-	this.oImgUl.className = 'slide_main';		//添加class
+	this.oImgUl.className = 'slide_main clearfix';		//添加class
 	this.dotUl.className = 'slide_tab';
 
 	for (var i = 0; i < imgDataLen; i++) {
@@ -69,7 +69,7 @@ Slide.prototype.slideAddEvent = function () {
 
 	for (var i = 0; i < _this.len; i++) {
 		//设置图片的定位
-		imgChildren[i].style.left = (i % _this.len) * wrapWidth + 'px';
+		// imgChildren[i].style.left = (i % _this.len) * wrapWidth + 'px';
 		//指示器绑定事件
 		(function (i) {		//i作为参数，需使用闭包
 			addEvent(dotChildren[i], 'mouseover', function () {
@@ -138,6 +138,18 @@ Slide.prototype.go = function(n) {			//间隔n张跳转
 	this.move(this.cur + n);
 	this.timer = this.autoPlay();
 };
+
+Slide.prototype.resize = function(newWidth) {
+	clearInterval(this.timer);
+	this.width = newWidth;
+	var aImg = this.oImgUl.getElementsByTagName('img');	
+	for (var j = 0; j < this.len; j++) {
+		aImg[j].style.width = this.width + 'px';		//设置图片的宽度和包裹元素一致
+	}
+	this.oImgUl.style.width = this.len * this.width + 'px';		//设置包含图片的ul的宽度
+	this.move(this.cur);
+	this.timer = this.autoPlay();
+}
 
 
 //公用函数

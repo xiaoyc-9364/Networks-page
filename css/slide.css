@@ -4,13 +4,20 @@
 	position: relative;
 }
 .slide_main{
-	position: absolute;
-	height: 100%;
+	position: relative;
+	/*height: 100%;*/
 	z-index: 1;
 }
 .slide_main li {
-	position: absolute;
+	/*position: absolute;*/
+	float: left;
 
+}
+.slide_main li  a {
+	display: block;
+}
+.slide_main li  a img{
+	display: block;
 }
 .slide_tab {
 	padding:5px 10px;
